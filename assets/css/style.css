@@ -1,0 +1,266 @@
+/* Googlwe Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Volkhov:wght@400;700&display=swap");
+/* ========== VARIABLES CSS ========== */
+:root {
+  /* Color */
+  --bg-color-1: #121212;
+  --bg-color-2: #242424;
+  --color-brand: #e7b837;
+  --color-brand-light: #dbb959;
+  --body-color: #c0c0c0;
+  --text-color: #fff;
+  --text-color-light: rgb(255, 255, 255, 0.1);
+  --border-radius: 24px;
+
+  /* Font and typography */
+  --body-font: "Volkhov", serif;
+  --text-font: "Poppins", sans-serif;
+  --biggest-font-size: 1.5rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+  --tiny-font-size: 0.625rem;
+
+  /* Font Weight */
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+}
+
+/* Responsive Typograpky */
+@media screen and(min-width:1024px) {
+  :root {
+    --biggest-font-size: 3rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+    --tiny-font-size: 0.75rem;
+  }
+}
+
+/* ========== Base ========== */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: var(--bg-color-1);
+  color: var(--body-color);
+  line-height: 1.7;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--font-semi-bold);
+  color: var(--text-color);
+}
+img {
+  width: 100%;
+}
+a {
+  transition: all 0.4 ease;
+  text-decoration: none;
+  color: var(--body-color);
+}
+a:hover {
+  color: var(--color-brand);
+}
+
+section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--bg-color-1);
+  border-bottom: 1px solid var(--bg-color-2);
+}
+.btn-brand {
+  background: var(--color-brand-light);
+  border-radius: 100px;
+  color: var(--bg-color-1);
+}
+.btn-brand:hover {
+  background: var(--color-brand);
+  border-color: var(--color-brand-light);
+  color: var(--bg-color-1);
+}
+/* And Navbar */
+
+#about h1 {
+  font-family: var(--body-font);
+  font-weight: 700;
+}
+#about p {
+  max-width: 600px;
+  margin: 24px auto;
+}
+#about .input-group {
+  background-color: var(--bg-color-2);
+  padding: 12px;
+  border-radius: 100px;
+  margin-bottom: 120px;
+}
+#about .input-group .btn {
+  border-radius: 100px;
+}
+#about .form-control {
+  background-color: transparent;
+  border: transparent;
+  color: var(--text-color);
+}
+#about .form-control:focus {
+  box-shadow: none;
+}
+.bg-image {
+  min-height: 450px;
+  background-image: url(/assets/image/cover1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* secton tittle */
+.section-tittle {
+  margin-bottom: 40px;
+}
+.section-tittle h6 {
+  background: var(--color-brand);
+  padding: 8px 16px;
+  border-radius: 100px;
+  display: inline-block;
+  color: var(--bg-color-1);
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-bold);
+}
+.section-tittle p {
+  max-width: 700px;
+}
+
+/* Services */
+.service {
+  border-radius: var(--border-radius);
+  background-color: var(--bg-color-2);
+}
+#services .section-tittle h6 {
+  cursor: pointer;
+}
+.icon-box {
+  width: 72px;
+  height: 72px;
+  display: inline-flex;
+  justify-content: center;
+  background-color: var(--text-color-light);
+  border-radius: 100px;
+  font-size: 40px;
+  color: var(--text-color);
+}
+
+/* Features */
+#features .row {
+  margin-bottom: 80px;
+}
+.feature-list {
+  padding: 0;
+  list-style: none;
+}
+.icon-box.sm {
+  width: 32px;
+  height: 32px;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.feature-image img {
+  border-radius: 32px;
+}
+.border-bottom {
+  border-bottom: 1px solid var(--bg-color-2) !important;
+}
+
+/* Team */
+.team-member {
+  position: relative;
+}
+.social-icon {
+  width: 38px;
+  height: 38px;
+  font-size: 20px;
+}
+.team-member::before {
+  content: "";
+  width: 100%;
+  height: calc(100% - 90px);
+  background: var(--bg-color-2);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+/* Review */
+.reviews-corousel {
+  max-width: 700px;
+  background: var(--bg-color-1);
+}
+#reviews {
+  background-image: url(/assets/image/reviews.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+/* .review {
+    padding: 60px;
+  } */
+.review img {
+  width: 65px;
+  border-radius: 100px;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  margin: auto;
+  width: 40px;
+}
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background: var(--color-brand);
+}
+.carousel-control-prev {
+  border-right: 1px solid var(--bg-color-2);
+}
+.carousel-control-next {
+  border-left: 1px solid var(--bg-color-2);
+}
+
+/* Blog */
+.blog-post-content {
+  border-radius: 0 0 32px 32px;
+  background: var(--bg-color-2);
+}
+.blog-spot img {
+  border-radius: 32px 32px 0 0;
+}
+.bg-image2 {
+  min-height: 450px;
+  background-image: url(/assets/image/cover2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* Footer */
+.footer-brand img {
+  width: 180px;
+}
+.footer-tittle a {
+  display: block;
+}
